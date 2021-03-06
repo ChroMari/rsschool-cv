@@ -117,7 +117,7 @@ body {
   border-radius: 4px;
 }
 
-.person:after {
+.person::after {
   content: '';
   position: absolute;
   left: -15px;
@@ -272,7 +272,7 @@ body {
   font-weight: 500;
 }
 
-.title:before {
+.title::before {
   content: '';
   position: absolute;
   left: -18px;
@@ -283,7 +283,7 @@ body {
   border-radius: 50%;
 }
 
-.title:after {
+.title::after {
   content: '';
   position: absolute;
   left: -30px;
@@ -400,34 +400,101 @@ body {
   margin-right: 10px;
 }
 
+/*--------------------works-card--------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.card-inner {
-  padding: 0;
-  position: absolute;
-  overflow: hidden;
-  left: 575px;
-  right: 23px;
-  top: 40px;
-  bottom: 40px;
-  height: auto;
-  background: #fff;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 8;
-  border-radius: 0 4px 4px 0;
-  display: none;
+.card-work {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 30px;
 }
+
+.card-work__img {
+  height: 200px;
+  min-width: 250px;
+  margin-right: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-work__img-gif {
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+.card-work__title {
+  font-weight: 400;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.card-work__title::after {
+  background: radial-gradient(ellipse at left, #87ADFE 0%,rgba(255,255,255,0) 70%);
+  left: -20px;
+}
+
+.card-work__title::before {
+  background: linear-gradient(135deg,rgba(135, 173, 254, 0.25) 0%,rgba(46,202,127,.01) 100%);
+}
+
+.card-work__list {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-work__list-item {
+  font-weight: 300;
+  font-size: 14px;
+  color:#87ADFE;
+}
+
+.card-work__list-item + .card-work__list-item {
+  margin-left: 15px;
+}
+
+.card-work__list-item .item--strong {
+  margin-left: 0;
+}
+
+.card-work__text {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 300;
+}
+
+.card-work__buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card-work__buttons a {
+  padding: 1px 8px;
+  border: 1px solid #87adfe;
+  color: #87adfe;
+  border-radius: 2px;
+}
+
+.card-work__buttons a:hover {
+  background: #87ADFE;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
