@@ -486,15 +486,19 @@ body {
   color: #fff;
 }
 
+/*--------------------contacts-card--------------------------*/
 
+.contact__map {
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
 
+.contact__map iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
 
-
-
-
-
-
-
-
-
-
+.contact-list strong {
+  margin-right: 25px;
+}
