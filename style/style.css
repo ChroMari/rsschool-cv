@@ -24,6 +24,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
+  color: #323232;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +36,8 @@ body {
   width: 1200px;
   padding: 22px;
 }
+
+/*--------------------header--------------------------*/
 
 .header {
   margin-right: 5px;
@@ -84,12 +87,120 @@ body {
   border-radius: 0 0 4px 4px;
 }
 
-.header__item:hover .header__item-link {
+.header__item:hover .header__item-link,
+.person-social__link:hover {
   color: #FF77CD;
 }
 
 .header__item--active .header__item-link {
   color: #87ADFE;
+}
+
+/*--------------------person-card--------------------------*/
+
+.person {
+  position: relative;
+  float: left;
+  width: 480px;
+  height: 100%;
+  z-index: 11;
+}
+
+.person::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 10px 10px 15px rgb(0 0 0 / 5%);
+  border-radius: 4px;
+}
+
+.person:after {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg,rgba(255, 119, 205,.15) 0%,rgba(46,202,127,.01) 100%);
+  border-radius: 4px; 
+}
+
+.person-photo {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  background: #fff;
+  z-index: 10;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.person__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60%;
+  background-position: 0px -102px;
+  background-size: cover;
+  z-index: 0;
+}
+
+.person__img::before, 
+.person__img::after{
+  content: '';
+  position: absolute;
+  left: -25%;
+  bottom: -63%;
+  width: 100%;
+  height: 70%;
+  background: #fff;
+  transform: rotate(12deg);
+}
+
+.person__img::after{
+  left: auto;
+  right: -25%;
+  transform: rotate(-8deg);
+}
+
+.person__title {
+  position: relative;
+  margin: 280px 0 10px;
+  font-size: 34px;
+  line-height: 32px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.person__subtitle {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  color: #87ADFE;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.person-social {
+  position: relative;
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.person-social__link {
+  margin: 0 10px;
+  font-size: 20px;
+  color: #323232;
+  line-height: 30px;
+  transition: all .3s ease 0s;
 }
 
 
